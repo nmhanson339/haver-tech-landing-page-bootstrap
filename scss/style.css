@@ -3,6 +3,7 @@
   --header-ht: 56px;
   --header-pd: 8px 16px;
   --main-ht: calc(100vh - var(--header-ht));
+  --copy-area-pd: 16px;
 }
 
 /* - - - - - GENERAL STYLES - - - - - */
@@ -60,5 +61,10 @@ ul li {
 main {
   height: var(--main-ht);
   background-color: lightgrey;
+}
+
+main .copy-area {
+  padding: var(--copy-area-pd);
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

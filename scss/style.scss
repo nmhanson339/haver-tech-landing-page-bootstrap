@@ -3,6 +3,7 @@
   --header-ht: 56px;
   --header-pd: 8px 16px;
   --main-ht: calc(100vh - var(--header-ht));
+  --copy-area-pd: 16px;
 }
 
 /* - - - - - GENERAL STYLES - - - - - */
@@ -50,4 +51,9 @@ main {
   height: var(--main-ht);
   background-color: lightgrey;
   // outline: 2px salmon dotted;
+  .copy-area {
+    padding: var(--copy-area-pd);
+    text-align: center;
+    // outline: 1px orange dashed;
+  }
 }
