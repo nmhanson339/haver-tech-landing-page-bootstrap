@@ -1,4 +1,14 @@
+/* - - - - - GLOBAL VARIABLES - - - - - */
+:root {
+  --header-ht: 40px;
+  --main-ht: calc(100vh - var(--header-ht));
+}
+
 /* - - - - - GENERAL STYLES - - - - - */
+body {
+  margin: 0;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -10,5 +20,18 @@ a {
 
 ul li {
   list-style: none;
+}
+
+/* - - - - - HEADER STYLES - - - - - */
+.page-header {
+  height: var(--header-ht);
+  outline: 2px lime dashed;
+}
+
+/* - - - - - MAIN STYLES - - - - - */
+main {
+  height: var(--main-ht);
+  background-color: lightgrey;
+  outline: 2px salmon dotted;
 }
 /*# sourceMappingURL=style.css.map */

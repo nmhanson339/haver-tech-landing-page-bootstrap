@@ -1,4 +1,33 @@
+/* - - - - - GLOBAL VARIABLES - - - - - */
+:root {
+  --header-ht: 40px;
+  --main-ht: calc(100vh - var(--header-ht));
+}
+
 /* - - - - - GENERAL STYLES - - - - - */
-* { box-sizing: border-box; }
-a { text-decoration: none; }
-ul li { list-style: none; }
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+
+/* - - - - - HEADER STYLES - - - - - */
+.page-header {
+  height: var(--header-ht);
+  outline: 2px lime dashed;
+}
+
+/* - - - - - MAIN STYLES - - - - - */
+main {
+  height: var(--main-ht);
+  background-color: lightgrey;
+  outline: 2px salmon dotted;
+}
