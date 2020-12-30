@@ -1,6 +1,7 @@
 /* - - - - - GLOBAL VARIABLES - - - - - */
 :root {
-  --header-ht: 40px;
+  --header-ht: 56px;
+  --header-pd: 8px 16px;
   --main-ht: calc(100vh - var(--header-ht));
 }
 
@@ -12,9 +13,11 @@ body {
 * {
   box-sizing: border-box;
 }
+
 a {
   text-decoration: none;
 }
+
 ul li {
   list-style: none;
 }
@@ -22,12 +25,29 @@ ul li {
 /* - - - - - HEADER STYLES - - - - - */
 .page-header {
   height: var(--header-ht);
-  outline: 2px lime dashed;
+  // outline: 2px lime dashed;
+  display: flex;
+  padding: var(--header-pd);
+
+  .header-logo {
+    display: flex;
+    flex-direction: column;
+    span:nth-child(1) {
+      letter-spacing: 10px;
+    }
+    span:nth-child(2) {
+      font-size: 14px;
+    }
+  }
+
+  .header-spacer {
+    flex: 1;
+  }
 }
 
 /* - - - - - MAIN STYLES - - - - - */
 main {
   height: var(--main-ht);
   background-color: lightgrey;
-  outline: 2px salmon dotted;
+  // outline: 2px salmon dotted;
 }

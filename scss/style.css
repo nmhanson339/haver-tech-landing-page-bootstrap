@@ -1,6 +1,7 @@
 /* - - - - - GLOBAL VARIABLES - - - - - */
 :root {
-  --header-ht: 40px;
+  --header-ht: 56px;
+  --header-pd: 8px 16px;
   --main-ht: calc(100vh - var(--header-ht));
 }
 
@@ -25,13 +26,39 @@ ul li {
 /* - - - - - HEADER STYLES - - - - - */
 .page-header {
   height: var(--header-ht);
-  outline: 2px lime dashed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: var(--header-pd);
+}
+
+.page-header .header-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.page-header .header-logo span:nth-child(1) {
+  letter-spacing: 10px;
+}
+
+.page-header .header-logo span:nth-child(2) {
+  font-size: 14px;
+}
+
+.page-header .header-spacer {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 /* - - - - - MAIN STYLES - - - - - */
 main {
   height: var(--main-ht);
   background-color: lightgrey;
-  outline: 2px salmon dotted;
 }
 /*# sourceMappingURL=style.css.map */
