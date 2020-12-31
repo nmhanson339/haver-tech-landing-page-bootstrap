@@ -3,7 +3,7 @@
   --header-ht: 56px;
   --header-pd: 8px 16px;
   --main-ht: calc(100vh - var(--header-ht));
-  --copy-area-pd: 32px;
+  --main-child-pd: 32px;
 }
 
 /* - - - - - GENERAL STYLES - - - - - */
@@ -55,13 +55,15 @@ main {
   background-color: lightgrey;
   // outline: 2px salmon dotted;
   .copy-area {
-    padding: var(--copy-area-pd);
+    padding: var(--main-child-pd);
     text-align: center;
     // outline: 1px orange dashed;
   }
+
   .benefits-area {
     display: flex;
     justify-content: space-evenly;
+    padding: var(--main-child-pd);
     outline: orchid 1px dashed;
     .benefit {
       display: flex;
@@ -80,6 +82,24 @@ main {
     }
     .benefit:nth-of-type(3) .benefit-icon {
       background-image: url("./../assets/icons/icon_headset.png");
+    }
+  }
+
+  .form-area {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    padding: calc(var(--main-child-pd) * 2);
+    outline: 1px dashed royalblue;
+    .form-cta-button {
+      width: 200px;
+      padding: 12px;
+      font-size: 16px;
+      letter-spacing: 2px;
+    }
+    .form-privacy-notice {
+      margin: 5px auto;
     }
   }
 }
