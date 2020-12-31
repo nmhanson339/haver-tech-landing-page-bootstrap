@@ -3,7 +3,7 @@
   --header-ht: 56px;
   --header-pd: 8px 16px;
   --main-ht: calc(100vh - var(--header-ht));
-  --copy-area-pd: 16px;
+  --copy-area-pd: 32px;
 }
 
 /* - - - - - GENERAL STYLES - - - - - */
@@ -19,8 +19,11 @@ a {
   text-decoration: none;
 }
 
-ul li {
-  list-style: none;
+ul {
+  padding-left: 0;
+  li {
+    list-style: none;
+  }
 }
 
 /* - - - - - HEADER STYLES - - - - - */
@@ -55,5 +58,28 @@ main {
     padding: var(--copy-area-pd);
     text-align: center;
     // outline: 1px orange dashed;
+  }
+  .benefits-area {
+    display: flex;
+    justify-content: space-evenly;
+    outline: orchid 1px dashed;
+    .benefit {
+      display: flex;
+      .benefit-icon {
+        width: 40px;
+        height: 40px;
+        margin: 8px;
+        background: transparent center center no-repeat;
+        background-image: url("./../assets/icons/icon_bolt.png");
+        background-size: 40px 40px;
+        // outline: 1px dashed peru;
+      }
+    }
+    .benefit:nth-of-type(2) .benefit-icon {
+      background-image: url("./../assets/icons/icon_quadrants.png");
+    }
+    .benefit:nth-of-type(3) .benefit-icon {
+      background-image: url("./../assets/icons/icon_headset.png");
+    }
   }
 }
