@@ -63,6 +63,13 @@ ul li {
 
 /* - - - - - MAIN STYLES - - - - - */
 main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: var(--main-ht);
   background-color: lightgrey;
 }
@@ -80,7 +87,6 @@ main .benefits-area {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   padding: var(--main-child-pd);
-  outline: orchid 1px dashed;
 }
 
 main .benefits-area .benefit {
@@ -110,15 +116,20 @@ main .form-area {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   padding: calc(var(--main-child-pd) * 2);
-  outline: 1px dashed royalblue;
 }
 
 main .form-area .form-cta-button {
@@ -130,5 +141,32 @@ main .form-area .form-cta-button {
 
 main .form-area .form-privacy-notice {
   margin: 5px auto;
+}
+
+main .famous-clients-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: var(--main-child-pd);
+}
+
+main .famous-clients-area .famous-client {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: transparent center center no-repeat;
+  background-image: url("./../assets/logos/logo-horse.jpg");
+  background-size: 80px 80px;
+}
+
+main .famous-clients-area .famous-client:nth-of-type(2) {
+  background-image: url("./../assets/logos/logo-j-company.jpg");
+}
+
+main .famous-clients-area .famous-client:nth-of-type(3) {
+  background-image: url("./../assets/logos//logo-w-company.jpg");
 }
 /*# sourceMappingURL=style.css.map */

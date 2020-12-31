@@ -51,6 +51,8 @@ ul {
 
 /* - - - - - MAIN STYLES - - - - - */
 main {
+  display: flex;
+  flex-direction: column;
   height: var(--main-ht);
   background-color: lightgrey;
   // outline: 2px salmon dotted;
@@ -64,7 +66,7 @@ main {
     display: flex;
     justify-content: space-evenly;
     padding: var(--main-child-pd);
-    outline: orchid 1px dashed;
+    // outline: orchid 1px dashed;
     .benefit {
       display: flex;
       .benefit-icon {
@@ -87,11 +89,12 @@ main {
 
   .form-area {
     display: flex;
+    flex: 1;
     flex-direction: column;
-    // justify-content: center;
+    justify-content: center;
     align-items: center;
     padding: calc(var(--main-child-pd) * 2);
-    outline: 1px dashed royalblue;
+    // outline: 1px dashed royalblue;
     .form-cta-button {
       width: 200px;
       padding: 12px;
@@ -100,6 +103,28 @@ main {
     }
     .form-privacy-notice {
       margin: 5px auto;
+    }
+  }
+
+  .famous-clients-area {
+    // outline: rosybrown 1px dotted;
+    display: flex;
+    justify-content: space-evenly;
+    padding: var(--main-child-pd);
+    .famous-client {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: transparent center center no-repeat;
+      background-image: url("./../assets/logos/logo-horse.jpg");
+      background-size: 80px 80px;
+      // outline: 1px dashed peru;
+    }
+    .famous-client:nth-of-type(2) {
+      background-image: url("./../assets/logos/logo-j-company.jpg");
+    }
+    .famous-client:nth-of-type(3) {
+      background-image: url("./../assets/logos//logo-w-company.jpg");
     }
   }
 }
