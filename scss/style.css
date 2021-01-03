@@ -3,7 +3,15 @@
   --header-ht: 56px;
   --header-pd: 8px 16px;
   --main-ht: calc(100vh - var(--header-ht));
-  --main-child-pd: 32px;
+  --main-child-pd: 1rem;
+  --copy-area-bgc: #dcdcdc;
+  --copy-area-bg-image: url("./../assets/images/img-c-shape-tower.jpg");
+  --benefits-area-bgc: #dcdcdc;
+  --benefits-area-bg-image: ;
+  --form-area-bgc: lightgrey;
+  --form-cta-button-bgc: #faebd7;
+  --form-area-bg-image: url("./../assets/images/");
+  --famous-clients-area-bgc: #dcdcdc;
 }
 
 /* - - - - - GENERAL STYLES - - - - - */
@@ -74,9 +82,21 @@ main {
   background-color: lightgrey;
 }
 
-main .copy-area {
+main > div {
   padding: var(--main-child-pd);
+  background: center center no-repeat;
+  background-size: cover;
+}
+
+main .copy-area {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: var(--copy-area-bgc);
+  background-image: var(--copy-area-bg-image), -webkit-gradient(linear, left top, left bottom, from(black), to(black));
+  background-image: var(--copy-area-bg-image), linear-gradient(black, black);
   text-align: center;
+  color: white;
 }
 
 main .benefits-area {
@@ -86,7 +106,9 @@ main .benefits-area {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  padding: var(--main-child-pd);
+  background-color: var(--benefits-area-bgc);
+  background-image: var(--benefits-area-bg-image), -webkit-gradient(linear, left top, left bottom, from(black), to(black));
+  background-image: var(--benefits-area-bg-image), linear-gradient(black, black);
 }
 
 main .benefits-area .benefit {
@@ -112,6 +134,27 @@ main .benefits-area .benefit:nth-of-type(3) .benefit-icon {
   background-image: url("./../assets/icons/icon_headset.png");
 }
 
+@media screen and (max-width: 600px) {
+  main .benefits-area .benefit .benefit-icon {
+    background-size: 30px 30px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  main .benefits-area {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .benefits-area .benefit-section ul {
+    display: none;
+  }
+}
+
 main .form-area {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -129,7 +172,9 @@ main .form-area {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: calc(var(--main-child-pd) * 2);
+  background-color: var(--form-area-bgc);
+  background-image: var(--form-area-bg-image);
+  padding: calc(var(--main-child-pd) * 1.5);
 }
 
 main .form-area .form-cta-button {
@@ -137,6 +182,7 @@ main .form-area .form-cta-button {
   padding: 12px;
   font-size: 16px;
   letter-spacing: 2px;
+  background-color: var(--form-cta-button-bgc);
 }
 
 main .form-area .form-privacy-notice {
@@ -150,16 +196,17 @@ main .famous-clients-area {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  background-color: var(--famous-clients-area-bgc);
   padding: var(--main-child-pd);
 }
 
 main .famous-clients-area .famous-client {
-  width: 80px;
-  height: 80px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background: transparent center center no-repeat;
   background-image: url("./../assets/logos/logo-horse.jpg");
-  background-size: 80px 80px;
+  background-size: 40px 40px;
 }
 
 main .famous-clients-area .famous-client:nth-of-type(2) {
@@ -167,6 +214,16 @@ main .famous-clients-area .famous-client:nth-of-type(2) {
 }
 
 main .famous-clients-area .famous-client:nth-of-type(3) {
-  background-image: url("./../assets/logos//logo-w-company.jpg");
+  background-image: url("./../assets/logos/logo-w-company.jpg");
+}
+
+main .famous-clients-area .famous-client:nth-of-type(4) {
+  background-image: url("./../assets/logos/logo-rocket-ship.jpg");
+}
+
+@media screen and (max-width: 400px) {
+  main .famous-clients-area {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
