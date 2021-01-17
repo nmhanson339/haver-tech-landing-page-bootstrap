@@ -5,18 +5,17 @@
   --header-bgc: #2c3e50;
   --main-ht: calc(100vh - var(--header-ht));
   --main-child-pd: 1rem;
+  --copy-area-text-color: #6a6a6a;
   --copy-area-bgc: #dcdcdc;
-  // --copy-area-bg-image: url("./../assets/images/img-c-shape-tower.jpg");
   --copy-area-bg-image-legacy: #757f9a; /* fallback for old browsers */
   --copy-area-bg-image-webkit: -webkit-linear-gradient(
-      to right,
-      #d7dde8,
-      50%,
-      #757f9a
+      rgba(255, 192, 203, 0.8),
+      45%,
+      #ebeff2
     ),
-    url("./../assets/images/img-c-shape-tower.jpg"); /* Chrome 10-25, Safari 5.1-6 */
-  --copy-area-bg-image: linear-gradient(to right, #d7dde8, 50%, #757f9a),
-    url("./../assets/images/img-c-shape-tower.jpg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 
+    url("./../assets/images/img-chess-checkmate.jpg"); /* Chrome 10-25, Safari 5.1-6 */
+  --copy-area-bg-image: linear-gradient(rgba(255, 192, 203, 0.8), 45%, #ebeff2),
+    url("./../assets/images/img-chess-checkmate.jpg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 
   26+, Opera 12+, Safari 7+ */
   --benefits-area-bgc: #ecf0f1;
   --benefits-area-bg-image: ; // Null
@@ -90,9 +89,10 @@ main {
     order: 1;
     background-image: var(--copy-area-bg-image);
     text-align: center;
-    color: white;
+    color: var(--copy-area-text-color);
     h1 {
-      // font-size: 2.5em;
+      font-size: 2.5em;
+      letter-spacing: 0.3em;
     }
     h2 {
       // font-size: 2em;
