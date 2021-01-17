@@ -74,6 +74,15 @@ ul {
   .header-spacer {
     flex: 1;
   }
+  @media screen and (max-width: 400px) {
+    .header-cta-btn,
+    .header-spacer {
+      display: none;
+    }
+    .header-logo {
+      margin: auto;
+    }
+  }
 }
 
 /* - - - - - MAIN STYLES - - - - - */

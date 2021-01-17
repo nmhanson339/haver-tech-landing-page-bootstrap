@@ -92,6 +92,16 @@ ul li {
           flex: 1;
 }
 
+@media screen and (max-width: 400px) {
+  .page-header .header-cta-btn,
+  .page-header .header-spacer {
+    display: none;
+  }
+  .page-header .header-logo {
+    margin: auto;
+  }
+}
+
 /* - - - - - MAIN STYLES - - - - - */
 main {
   display: -webkit-box;
