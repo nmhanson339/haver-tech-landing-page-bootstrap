@@ -59,10 +59,12 @@ ul {
   padding: var(--header-pd);
   background: var(--header-bgc);
   color: whitesmoke;
+  & > * {
+    color: whitesmoke;
+  }
   .header-logo {
     display: flex;
     flex-direction: column;
-    color: whitesmoke;
     span:nth-child(1) {
       letter-spacing: 10px;
     }
@@ -74,8 +76,15 @@ ul {
   .header-spacer {
     flex: 1;
   }
+  .header-cta-button {
+    background-color: transparent;
+    border: 2px solid whitesmoke;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
   @media screen and (max-width: 400px) {
-    .header-cta-btn,
+    .header-cta-button,
     .header-spacer {
       display: none;
     }

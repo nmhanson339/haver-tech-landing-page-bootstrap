@@ -67,6 +67,10 @@ ul li {
   color: whitesmoke;
 }
 
+.page-header > * {
+  color: whitesmoke;
+}
+
 .page-header .header-logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -75,7 +79,6 @@ ul li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  color: whitesmoke;
 }
 
 .page-header .header-logo span:nth-child(1) {
@@ -92,8 +95,17 @@ ul li {
           flex: 1;
 }
 
+.page-header .header-cta-button {
+  background-color: transparent;
+  border: 2px solid whitesmoke;
+}
+
+.page-header .header-cta-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
 @media screen and (max-width: 400px) {
-  .page-header .header-cta-btn,
+  .page-header .header-cta-button,
   .page-header .header-spacer {
     display: none;
   }
