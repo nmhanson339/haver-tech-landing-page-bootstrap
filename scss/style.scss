@@ -23,7 +23,8 @@
   --form-cta-button-bgc: royalblue;
   --form-cta-button-color: white;
   --form-area-bg-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
-  --famous-clients-area-bgc: #2c3e50;
+  // --famous-clients-area-bgc: #2c3e50;
+  --famous-clients-area-bgc: #ecf0f1;
 }
 
 /* - - - - - GENERAL STYLES - - - - - */
@@ -156,12 +157,12 @@ main {
     justify-content: center;
     align-items: center;
     background-color: var(--form-area-bgc);
-    // background-image: var(--form-area-bg-image);
     padding: calc(var(--main-child-pd) * 1.5);
     // outline: 1px dashed royalblue;
     .form-cta-button {
       width: 200px;
       padding: 12px;
+      border-radius: 8px;
       font-size: 16px;
       letter-spacing: 2px;
       background-color: var(--form-cta-button-bgc);
