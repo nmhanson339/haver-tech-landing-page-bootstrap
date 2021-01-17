@@ -114,6 +114,30 @@ ul li {
   }
 }
 
+@media screen and (max-height: 740px) {
+  .page-header {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .page-header .header-cta-button,
+  .page-header .header-spacer {
+    display: none;
+  }
+  .page-header .header-logo {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .page-header .header-logo span:nth-child(1),
+  .page-header .header-logo span:nth-child(2) {
+    letter-spacing: inherit;
+    font-size: inherit;
+    padding: 0 4px;
+  }
+}
+
 /* - - - - - MAIN STYLES - - - - - */
 main {
   display: -webkit-box;

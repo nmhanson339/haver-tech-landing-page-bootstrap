@@ -92,6 +92,24 @@ ul {
       margin: auto;
     }
   }
+  @media screen and (max-height: 740px) {
+    & {
+      height: fit-content;
+    }
+    .header-cta-button,
+    .header-spacer {
+      display: none;
+    }
+    .header-logo {
+      flex-direction: row;
+      span:nth-child(1),
+      span:nth-child(2) {
+        letter-spacing: inherit;
+        font-size: inherit;
+        padding: 0 4px;
+      }
+    }
+  }
 }
 
 /* - - - - - MAIN STYLES - - - - - */
