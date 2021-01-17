@@ -5,7 +5,7 @@
   --header-bgc: #2c3e50;
   --main-ht: calc(100vh - var(--header-ht));
   --main-child-pd: 1rem;
-  --copy-area-text-color: #6a6a6a;
+  --copy-area-text-color: #4a4a4a;
   --copy-area-bgc: #dcdcdc;
   --copy-area-bg-image-legacy: #757f9a; /* fallback for old browsers */
   --copy-area-bg-image-webkit: -webkit-linear-gradient(
@@ -17,6 +17,9 @@
   --copy-area-bg-image: linear-gradient(rgba(255, 192, 203, 0.8), 45%, #ebeff2),
     url("./../assets/images/img-chess-checkmate.jpg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 
   26+, Opera 12+, Safari 7+ */
+  --copy-area-bg-image: linear-gradient(hsla(30, 100%, 70%, 0.65), 40%, #ebeff2),
+    url("./../assets/images/img-chess-checkmate.jpg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 
+26+, Opera 12+, Safari 7+ */
   --benefits-area-bgc: #ecf0f1;
   --benefits-area-bg-image: ; // Null
   --form-area-bgc: #ecf0f1;
@@ -92,13 +95,27 @@ main {
     text-align: center;
     color: var(--copy-area-text-color);
     h1 {
-      font-size: 2.5em;
+      font-size: 5.5vw;
       letter-spacing: 0.3em;
     }
     h2 {
-      // font-size: 2em;
+      font-size: 1.8em;
     }
     // outline: 1px orange dashed;
+    @media screen and (max-width: 600px) {
+      & {
+        h1 {
+          font-size: 2.5em;
+        }
+      }
+    }
+    @media screen and (max-width: 400px) {
+      & {
+        h2 {
+          font-size: 1.5em;
+        }
+      }
+    }
   }
 
   .benefits-area {
@@ -142,6 +159,7 @@ main {
       & {
         flex-direction: column;
         align-items: center;
+        order: 2;
         .benefit-section ul {
           display: none;
         }
@@ -186,6 +204,11 @@ main {
     .form-privacy-notice {
       margin: 8px auto;
     }
+    @media screen and (max-width: 400px) {
+      & {
+        order: 2;
+      }
+    }
   }
 
   .famous-clients-area {
@@ -199,7 +222,7 @@ main {
       width: 60px;
       height: 60px;
       border-radius: 50%;
-      border: 2px #6a6a6a solid;
+      border: 2px var(--copy-area-text-color) solid;
       background: transparent center center no-repeat;
       background-image: url("./../assets/logos/logo-horse.jpg");
       background-size: 60px 60px;

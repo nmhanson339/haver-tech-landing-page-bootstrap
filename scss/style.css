@@ -5,7 +5,7 @@
   --header-bgc: #2c3e50;
   --main-ht: calc(100vh - var(--header-ht));
   --main-child-pd: 1rem;
-  --copy-area-text-color: #6a6a6a;
+  --copy-area-text-color: #4a4a4a;
   --copy-area-bgc: #dcdcdc;
   --copy-area-bg-image-legacy: #757f9a;
   /* fallback for old browsers */
@@ -20,6 +20,10 @@
     url("./../assets/images/img-chess-checkmate.jpg");
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 
   26+, Opera 12+, Safari 7+ */
+  --copy-area-bg-image: linear-gradient(hsla(30, 100%, 70%, 0.65), 40%, #ebeff2),
+    url("./../assets/images/img-chess-checkmate.jpg");
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 
+26+, Opera 12+, Safari 7+ */
   --benefits-area-bgc: #ecf0f1;
   --benefits-area-bg-image: ;
   --form-area-bgc: #ecf0f1;
@@ -120,8 +124,24 @@ main .copy-area {
 }
 
 main .copy-area h1 {
-  font-size: 2.5em;
+  font-size: 5.5vw;
   letter-spacing: 0.3em;
+}
+
+main .copy-area h2 {
+  font-size: 1.8em;
+}
+
+@media screen and (max-width: 600px) {
+  main .copy-area h1 {
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  main .copy-area h2 {
+    font-size: 1.5em;
+  }
 }
 
 main .benefits-area {
@@ -185,6 +205,9 @@ main .benefits-area .benefit-section {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
   }
   main .benefits-area .benefit-section ul {
     display: none;
@@ -244,6 +267,14 @@ main .form-area .form-privacy-notice {
   margin: 8px auto;
 }
 
+@media screen and (max-width: 400px) {
+  main .form-area {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
 main .famous-clients-area {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -262,7 +293,7 @@ main .famous-clients-area .famous-client {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  border: 2px #6a6a6a solid;
+  border: 2px var(--copy-area-text-color) solid;
   background: transparent center center no-repeat;
   background-image: url("./../assets/logos/logo-horse.jpg");
   background-size: 60px 60px;
