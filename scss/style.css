@@ -125,12 +125,16 @@ main .benefits-area .benefit {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 main .benefits-area .benefit .benefit-icon {
   width: 40px;
   height: 40px;
-  margin: 8px;
+  margin: auto;
   background: transparent center center no-repeat;
   background-image: url("./../assets/icons/icon_bolt.png");
   background-size: 40px 40px;
@@ -142,6 +146,10 @@ main .benefits-area .benefit:nth-of-type(2) .benefit-icon {
 
 main .benefits-area .benefit:nth-of-type(3) .benefit-icon {
   background-image: url("./../assets/icons/icon_headset.png");
+}
+
+main .benefits-area .benefit-section {
+  text-align: center;
 }
 
 @media screen and (max-width: 600px) {
