@@ -2,17 +2,30 @@
 :root {
   --header-ht: 56px;
   --header-pd: 8px 16px;
+  --header-bgc: #2c3e50;
   --main-ht: calc(100vh - var(--header-ht));
   --main-child-pd: 1rem;
-
   --copy-area-bgc: #dcdcdc;
-  --copy-area-bg-image: url("./../assets/images/img-c-shape-tower.jpg"); // Null
-  --benefits-area-bgc: #dcdcdc;
+  // --copy-area-bg-image: url("./../assets/images/img-c-shape-tower.jpg");
+  --copy-area-bg-image: #757f9a; /* fallback for old browsers */
+  background-image: -webkit-linear-gradient(
+    to right,
+    #d7dde8,
+    #757f9a
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background-image: linear-gradient(
+    to right,
+    #d7dde8,
+    #757f9a
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 
+  26+, Opera 12+, Safari 7+ */
+  --benefits-area-bgc: #ecf0f1;
   --benefits-area-bg-image: ; // Null
-  --form-area-bgc: lightgrey;
-  --form-cta-button-bgc: #faebd7;
-  --form-area-bg-image: url("./../assets/images/"); // Null
-  --famous-clients-area-bgc: #dcdcdc;
+  --form-area-bgc: #ecf0f1;
+  --form-cta-button-bgc: royalblue;
+  --form-cta-button-color: white;
+  --form-area-bg-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
+  --famous-clients-area-bgc: #2c3e50;
 }
 
 /* - - - - - GENERAL STYLES - - - - - */
@@ -41,10 +54,12 @@ ul {
   // outline: 2px lime dashed;
   display: flex;
   padding: var(--header-pd);
+  background: var(--header-bgc);
 
   .header-logo {
     display: flex;
     flex-direction: column;
+    color: whitesmoke;
     span:nth-child(1) {
       letter-spacing: 10px;
     }
@@ -72,9 +87,7 @@ main {
   }
   .copy-area {
     flex: 1;
-    background-color: var(--copy-area-bgc);
-    background-image: var(--copy-area-bg-image),
-      linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
+    background-image: var(--copy-area-bg-image);
     text-align: center;
     color: white;
     h1 {
@@ -136,7 +149,7 @@ main {
     justify-content: center;
     align-items: center;
     background-color: var(--form-area-bgc);
-    background-image: var(--form-area-bg-image);
+    // background-image: var(--form-area-bg-image);
     padding: calc(var(--main-child-pd) * 1.5);
     // outline: 1px dashed royalblue;
     .form-cta-button {
@@ -145,6 +158,7 @@ main {
       font-size: 16px;
       letter-spacing: 2px;
       background-color: var(--form-cta-button-bgc);
+      color: var(--form-cta-button-color);
     }
     .form-privacy-notice {
       margin: 5px auto;
