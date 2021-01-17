@@ -25,6 +25,7 @@
 /* - - - - - GENERAL STYLES - - - - - */
 body {
   margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 * {
@@ -52,6 +53,7 @@ ul li {
   display: flex;
   padding: var(--header-pd);
   background: var(--header-bgc);
+  color: whitesmoke;
 }
 
 .page-header .header-logo {
