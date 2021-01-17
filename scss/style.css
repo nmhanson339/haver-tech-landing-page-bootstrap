@@ -23,7 +23,7 @@
   --benefits-area-bgc: #ecf0f1;
   --benefits-area-bg-image: ;
   --form-area-bgc: #ecf0f1;
-  --form-cta-button-bgc: royalblue;
+  --form-cta-button-bgc: #577bc7;
   --form-cta-button-color: white;
   --form-area-bg-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
   --famous-clients-area-bgc: #ecf0f1;
@@ -217,16 +217,31 @@ main .form-area {
 
 main .form-area .form-cta-button {
   width: 200px;
-  padding: 12px;
+  padding: 16px;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: x-large;
+  font-weight: 700;
   letter-spacing: 2px;
   background-color: var(--form-cta-button-bgc);
   color: var(--form-cta-button-color);
+  border: 1px transparent solid;
+  box-shadow: 0px 4px 14px -2px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 0px 4px 14px -2px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 4px 14px -2px rgba(0, 0, 0, 0.7);
+}
+
+main .form-area .form-cta-button:active {
+  box-shadow: 0px 0px 12px -2px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 0px 0px 12px -2px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 0px 12px -2px rgba(0, 0, 0, 0.7);
+}
+
+main .form-area .form-cta-button:hover {
+  opacity: 0.9;
 }
 
 main .form-area .form-privacy-notice {
-  margin: 5px auto;
+  margin: 8px auto;
 }
 
 main .famous-clients-area {
@@ -244,12 +259,13 @@ main .famous-clients-area {
 }
 
 main .famous-clients-area .famous-client {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
+  border: 2px #6a6a6a solid;
   background: transparent center center no-repeat;
   background-image: url("./../assets/logos/logo-horse.jpg");
-  background-size: 40px 40px;
+  background-size: 60px 60px;
 }
 
 main .famous-clients-area .famous-client:nth-of-type(2) {
