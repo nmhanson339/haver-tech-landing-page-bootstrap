@@ -6,9 +6,13 @@
   --main-ht: calc(100vh - var(--header-ht));
   --main-child-pd: 1rem;
   --copy-area-bgc: #dcdcdc;
-  --copy-area-text-color: black;
-  --copy-area-bg-image: linear-gradient(rgba(255, 192, 203, 0.8), 45%, #ebeff2),
-    url("./../assets/images/img-chess-checkmate.jpg");
+  --copy-area-bg-image: #757f9a;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background-image: -webkit-gradient(linear, left top, right top, from(#d7dde8), to(#757f9a));
+  background-image: linear-gradient(to right, #d7dde8, #757f9a);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 
+  26+, Opera 12+, Safari 7+ */
   --benefits-area-bgc: #ecf0f1;
   --benefits-area-bg-image: ;
   --form-area-bgc: #ecf0f1;
@@ -21,7 +25,6 @@
 /* - - - - - GENERAL STYLES - - - - - */
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 * {
@@ -99,26 +102,15 @@ main .copy-area {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
   background-image: var(--copy-area-bg-image);
   text-align: center;
-  color: var(--copy-area-text-color);
-}
-
-main .copy-area h1 {
-  font-size: 2.5em;
-  letter-spacing: 0.3em;
+  color: white;
 }
 
 main .benefits-area {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -131,16 +123,12 @@ main .benefits-area .benefit {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 main .benefits-area .benefit .benefit-icon {
   width: 40px;
   height: 40px;
-  margin: auto;
+  margin: 8px;
   background: transparent center center no-repeat;
   background-image: url("./../assets/icons/icon_bolt.png");
   background-size: 40px 40px;
@@ -152,10 +140,6 @@ main .benefits-area .benefit:nth-of-type(2) .benefit-icon {
 
 main .benefits-area .benefit:nth-of-type(3) .benefit-icon {
   background-image: url("./../assets/icons/icon_headset.png");
-}
-
-main .benefits-area .benefit-section {
-  text-align: center;
 }
 
 @media screen and (max-width: 600px) {
@@ -196,9 +180,6 @@ main .form-area {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
   background-color: var(--form-area-bgc);
   padding: calc(var(--main-child-pd) * 1.5);
 }
@@ -223,9 +204,6 @@ main .famous-clients-area {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  -webkit-box-ordinal-group: 5;
-      -ms-flex-order: 4;
-          order: 4;
   background-color: var(--famous-clients-area-bgc);
   padding: var(--main-child-pd);
 }
