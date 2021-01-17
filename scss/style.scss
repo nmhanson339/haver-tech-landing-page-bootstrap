@@ -95,6 +95,7 @@ ul {
   @media screen and (max-height: 740px) {
     & {
       height: fit-content;
+      justify-content: center;
     }
     .header-cta-button,
     .header-spacer {
@@ -283,6 +284,12 @@ main {
       & {
         display: none;
       }
+    }
+  }
+  // MAIN QUERIES
+  @media screen and (max-height: 580px) {
+    & > div {
+      padding: 0.6rem;
     }
   }
 }
