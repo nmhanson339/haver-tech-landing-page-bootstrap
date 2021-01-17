@@ -88,6 +88,7 @@ main {
   }
   .copy-area {
     flex: 1;
+    order: 1;
     background-image: var(--copy-area-bg-image);
     text-align: center;
     color: white;
@@ -102,6 +103,7 @@ main {
 
   .benefits-area {
     display: flex;
+    order: 3;
     justify-content: space-evenly;
     background-color: var(--benefits-area-bgc);
     background-image: var(--benefits-area-bg-image),
@@ -149,6 +151,7 @@ main {
 
   .form-area {
     display: flex;
+    order: 2;
     flex: 1;
     flex-direction: column;
     justify-content: center;
@@ -173,6 +176,7 @@ main {
   .famous-clients-area {
     // outline: rosybrown 1px dotted;
     display: flex;
+    order: 4;
     justify-content: space-evenly;
     background-color: var(--famous-clients-area-bgc);
     padding: var(--main-child-pd);
