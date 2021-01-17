@@ -236,6 +236,12 @@ main .benefits-area .benefit-section {
   text-align: center;
 }
 
+@media screen and (max-height: 670px) {
+  main .benefits-area .benefit:nth-of-type(2) {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 600px) {
   main .benefits-area .benefit .benefit-icon {
     background-size: 30px 30px;

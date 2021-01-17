@@ -184,6 +184,11 @@ main {
     .benefit-section {
       text-align: center;
     }
+    @media screen and (max-height: 670px) {
+      .benefit:nth-of-type(2) {
+        display: none;
+      }
+    }
     @media screen and (max-width: 600px) {
       & {
         .benefit .benefit-icon {
