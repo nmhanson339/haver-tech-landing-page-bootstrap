@@ -6,11 +6,18 @@
   --main-ht: calc(100vh - var(--header-ht));
   --main-child-pd: 1rem;
   --copy-area-bgc: #dcdcdc;
-  --copy-area-bg-image: #757f9a;
+  --copy-area-bg-image-legacy: #757f9a;
   /* fallback for old browsers */
+  --copy-area-bg-image-webkit: -webkit-linear-gradient(
+      to right,
+      #d7dde8,
+      50%,
+      #757f9a
+    ),
+    url("./../assets/images/img-c-shape-tower.jpg");
   /* Chrome 10-25, Safari 5.1-6 */
-  background-image: -webkit-gradient(linear, left top, right top, from(#d7dde8), to(#757f9a));
-  background-image: linear-gradient(to right, #d7dde8, #757f9a);
+  --copy-area-bg-image: linear-gradient(to right, #d7dde8, 50%, #757f9a),
+    url("./../assets/images/img-c-shape-tower.jpg");
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 
   26+, Opera 12+, Safari 7+ */
   --benefits-area-bgc: #ecf0f1;

@@ -7,17 +7,16 @@
   --main-child-pd: 1rem;
   --copy-area-bgc: #dcdcdc;
   // --copy-area-bg-image: url("./../assets/images/img-c-shape-tower.jpg");
-  --copy-area-bg-image: #757f9a; /* fallback for old browsers */
-  background-image: -webkit-linear-gradient(
-    to right,
-    #d7dde8,
-    #757f9a
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background-image: linear-gradient(
-    to right,
-    #d7dde8,
-    #757f9a
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 
+  --copy-area-bg-image-legacy: #757f9a; /* fallback for old browsers */
+  --copy-area-bg-image-webkit: -webkit-linear-gradient(
+      to right,
+      #d7dde8,
+      50%,
+      #757f9a
+    ),
+    url("./../assets/images/img-c-shape-tower.jpg"); /* Chrome 10-25, Safari 5.1-6 */
+  --copy-area-bg-image: linear-gradient(to right, #d7dde8, 50%, #757f9a),
+    url("./../assets/images/img-c-shape-tower.jpg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 
   26+, Opera 12+, Safari 7+ */
   --benefits-area-bgc: #ecf0f1;
   --benefits-area-bg-image: ; // Null
