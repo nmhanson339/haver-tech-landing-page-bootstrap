@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "Alegreya Sans SC";
+  src: url("./../assets/fonts/Alegreya_Sans_SC/AlegreyaSansSC-ExtraBold.ttf") format("woff");
+  /* Modern Browsers */
+}
+
+@font-face {
+  font-family: "Racing Sans One";
+  src: url("./../assets/fonts/Racing_Sans_One/RacingSansOne-Regular.ttf") format("woff");
+  /* Modern Browsers */
+}
+
 /* - - - - - GLOBAL VARIABLES - - - - - */
 :root {
   --header-ht: 56px;
@@ -79,6 +91,7 @@ ul li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  font-family: "Racing Sans One", Arial, Helvetica, sans-serif;
 }
 
 .page-header .header-logo span:nth-child(1) {
@@ -175,6 +188,11 @@ main .copy-area {
 main .copy-area h1 {
   font-size: 5.5vw;
   letter-spacing: 0.3em;
+  font-family: "Alegreya Sans SC", Arial, Helvetica, sans-serif;
+}
+
+main .copy-area h1 span {
+  color: tomato;
 }
 
 main .copy-area h2 {
