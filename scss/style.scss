@@ -1,3 +1,5 @@
+/* - - - - - IMPORTS - - - - - */
+// LOCAL FONTS
 @font-face {
   font-family: "Alegreya Sans SC";
   src: url("./../assets/fonts/Alegreya_Sans_SC/AlegreyaSansSC-ExtraBold.ttf")
@@ -8,6 +10,11 @@
   src: url("./../assets/fonts/Racing_Sans_One/RacingSansOne-Regular.ttf")
     format("woff"); /* Modern Browsers */
 }
+
+// REMOTE FONTS
+// @import
+// url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@800&family=Racing+Sans+One&display=swap');
+
 /* - - - - - GLOBAL VARIABLES - - - - - */
 :root {
   --header-ht: 56px;
@@ -178,12 +185,12 @@ main {
       display: flex;
       flex-direction: column;
       .benefit-icon {
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
         margin: auto;
         background: transparent center center no-repeat;
         background-image: url("./../assets/icons/icon_bolt.png");
-        background-size: 40px 40px;
+        background-size: 50px 50px;
       }
     }
     .benefit:nth-of-type(2) .benefit-icon {
@@ -203,7 +210,9 @@ main {
     @media screen and (max-width: 600px) {
       & {
         .benefit .benefit-icon {
-          background-size: 30px 30px;
+          width: 40px;
+          height: 40px;
+          background-size: 40px 40px;
         }
       }
     }
@@ -272,10 +281,10 @@ main {
       width: 60px;
       height: 60px;
       border-radius: 50%;
-      border: 2px var(--copy-area-text-color) solid;
-      background: transparent center center no-repeat;
+      border: 1px transparent solid;
+      background: center center no-repeat;
       background-image: url("./../assets/logos/logo-horse.jpg");
-      background-size: 60px 60px;
+      background-size: 80px 80px;
     }
     .famous-client:nth-of-type(2) {
       background-image: url("./../assets/logos/logo-j-company.jpg");
@@ -286,7 +295,16 @@ main {
     .famous-client:nth-of-type(4) {
       background-image: url("./../assets/logos/logo-rocket-ship.jpg");
     }
-
+    // FAMOUS-CLIENTS QUERIES
+    @media screen and (min-width: 801px) {
+      & {
+        .famous-client {
+          width: 80px;
+          height: 80px;
+          background-size: 100px 100px;
+        }
+      }
+    }
     @media screen and (max-width: 400px) {
       & {
         display: none;

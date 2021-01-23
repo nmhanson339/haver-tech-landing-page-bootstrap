@@ -1,3 +1,4 @@
+/* - - - - - IMPORTS - - - - - */
 @font-face {
   font-family: "Alegreya Sans SC";
   src: url("./../assets/fonts/Alegreya_Sans_SC/AlegreyaSansSC-ExtraBold.ttf") format("woff");
@@ -237,12 +238,12 @@ main .benefits-area .benefit {
 }
 
 main .benefits-area .benefit .benefit-icon {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   margin: auto;
   background: transparent center center no-repeat;
   background-image: url("./../assets/icons/icon_bolt.png");
-  background-size: 40px 40px;
+  background-size: 50px 50px;
 }
 
 main .benefits-area .benefit:nth-of-type(2) .benefit-icon {
@@ -265,7 +266,9 @@ main .benefits-area .benefit-section {
 
 @media screen and (max-width: 600px) {
   main .benefits-area .benefit .benefit-icon {
-    background-size: 30px 30px;
+    width: 40px;
+    height: 40px;
+    background-size: 40px 40px;
   }
 }
 
@@ -366,10 +369,10 @@ main .famous-clients-area .famous-client {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  border: 2px var(--copy-area-text-color) solid;
-  background: transparent center center no-repeat;
+  border: 1px transparent solid;
+  background: center center no-repeat;
   background-image: url("./../assets/logos/logo-horse.jpg");
-  background-size: 60px 60px;
+  background-size: 80px 80px;
 }
 
 main .famous-clients-area .famous-client:nth-of-type(2) {
@@ -382,6 +385,14 @@ main .famous-clients-area .famous-client:nth-of-type(3) {
 
 main .famous-clients-area .famous-client:nth-of-type(4) {
   background-image: url("./../assets/logos/logo-rocket-ship.jpg");
+}
+
+@media screen and (min-width: 801px) {
+  main .famous-clients-area .famous-client {
+    width: 80px;
+    height: 80px;
+    background-size: 100px 100px;
+  }
 }
 
 @media screen and (max-width: 400px) {
