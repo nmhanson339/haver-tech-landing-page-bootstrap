@@ -22,28 +22,35 @@
   --header-bgc: #2c3e50;
   --main-ht: calc(100vh - var(--header-ht));
   --main-child-pd: 1rem;
+  --default-bgc: #ecf0f1;
   --copy-area-text-color: #4a4a4a;
   --copy-area-bgc: #dcdcdc;
   --copy-area-bg-image-legacy: #757f9a; /* fallback for old browsers */
   --copy-area-bg-image-webkit: -webkit-linear-gradient(
       rgba(255, 192, 203, 0.8),
       45%,
-      #ebeff2
+      var(--default-bgc)
     ),
     url("./../assets/images/img-chess-checkmate.jpg"); /* Chrome 10-25, Safari 5.1-6 */
-  --copy-area-bg-image: linear-gradient(rgba(255, 192, 203, 0.8), 45%, #ebeff2),
+  --copy-area-bg-image: linear-gradient(
+      rgba(255, 192, 203, 0.8),
+      45%,
+      var(--default-bgc)
+    ),
     url("./../assets/images/img-chess-checkmate.jpg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 
   26+, Opera 12+, Safari 7+ */
-  --copy-area-bg-image: linear-gradient(hsla(30, 100%, 70%, 0.65), 40%, #ebeff2),
+  --copy-area-bg-image: linear-gradient(
+      hsla(30, 100%, 70%, 0.65),
+      40%,
+      var(--default-bgc)
+    ),
     url("./../assets/images/img-chess-checkmate.jpg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 
 26+, Opera 12+, Safari 7+ */
-  --benefits-area-bgc: #ecf0f1;
-  --benefits-area-bg-image: ; // Null
-  --form-area-bgc: #ecf0f1;
+  --benefits-area-bgc: var(--default-bgc);
+  --form-area-bgc: var(--default-bgc);
   --form-cta-button-bgc: #577bc7;
-  --form-cta-button-color: white;
-  --form-area-bg-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
-  --famous-clients-area-bgc: #ecf0f1;
+  --form-cta-button-text-color: white;
+  --famous-clients-area-bgc: var(--default-bgc);
 }
 
 /* - - - - - GENERAL STYLES - - - - - */
@@ -179,8 +186,6 @@ main {
     order: 3;
     justify-content: space-evenly;
     background-color: var(--benefits-area-bgc);
-    background-image: var(--benefits-area-bg-image),
-      linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
     .benefit {
       display: flex;
       flex-direction: column;
@@ -245,7 +250,7 @@ main {
       font-weight: 700;
       letter-spacing: 2px;
       background-color: var(--form-cta-button-bgc);
-      color: var(--form-cta-button-color);
+      color: var(--form-cta-button-text-color);
       border: 1px transparent solid;
       box-shadow: 0px 4px 14px -2px rgba(0, 0, 0, 0.7);
       -webkit-box-shadow: 0px 4px 14px -2px rgba(0, 0, 0, 0.7);
@@ -276,12 +281,10 @@ main {
     order: 4;
     justify-content: space-evenly;
     background-color: var(--famous-clients-area-bgc);
-    padding: var(--main-child-pd);
     .famous-client {
       width: 60px;
       height: 60px;
       border-radius: 50%;
-      border: 1px transparent solid;
       background: center center no-repeat;
       background-image: url("./../assets/logos/logo-horse.jpg");
       background-size: 80px 80px;
