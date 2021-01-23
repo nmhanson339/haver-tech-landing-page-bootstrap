@@ -16,6 +16,7 @@
   --header-ht: 56px;
   --header-pd: 8px 16px;
   --header-bgc: #2c3e50;
+  --header-text-color: whitesmoke;
   --main-ht: calc(100vh - var(--header-ht));
   --main-child-pd: 1rem;
   --default-bgc: #ecf0f1;
@@ -84,11 +85,11 @@ ul li {
   display: flex;
   padding: var(--header-pd);
   background: var(--header-bgc);
-  color: whitesmoke;
+  color: var(--header-text-color);
 }
 
 .page-header > * {
-  color: whitesmoke;
+  color: var(--header-text-color);
 }
 
 .page-header .header-logo {
@@ -118,7 +119,7 @@ ul li {
 
 .page-header .header-cta-button {
   background-color: transparent;
-  border: 2px solid whitesmoke;
+  border: 2px solid;
 }
 
 .page-header .header-cta-button:hover {
@@ -188,18 +189,20 @@ main .copy-area {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
+  background-image: var(--copy-area-bg-image-legacy);
+  background-image: var(--copy-area-bg-image-webkit);
   background-image: var(--copy-area-bg-image);
   text-align: center;
   color: var(--copy-area-text-color);
 }
 
-main .copy-area h1 {
+main .copy-area h1.copy-logo {
   font-size: 5.5vw;
   letter-spacing: 0.3em;
   font-family: "Alegreya Sans SC", Arial, Helvetica, sans-serif;
 }
 
-main .copy-area h1 span {
+main .copy-area h1.copy-logo span {
   color: tomato;
 }
 

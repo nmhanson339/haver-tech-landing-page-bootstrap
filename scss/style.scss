@@ -1,14 +1,18 @@
 /* - - - - - IMPORTS - - - - - */
+
 // LOCAL FONTS
 @font-face {
   font-family: "Alegreya Sans SC";
   src: url("./../assets/fonts/Alegreya_Sans_SC/AlegreyaSansSC-ExtraBold.ttf")
-    format("woff"); /* Modern Browsers */
+    format("woff");
+  /* Modern Browsers */
 }
+
 @font-face {
   font-family: "Racing Sans One";
   src: url("./../assets/fonts/Racing_Sans_One/RacingSansOne-Regular.ttf")
-    format("woff"); /* Modern Browsers */
+    format("woff");
+  /* Modern Browsers */
 }
 
 // REMOTE FONTS
@@ -16,35 +20,41 @@
 // url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@800&family=Racing+Sans+One&display=swap');
 
 /* - - - - - GLOBAL VARIABLES - - - - - */
+
 :root {
   --header-ht: 56px;
   --header-pd: 8px 16px;
   --header-bgc: #2c3e50;
+  --header-text-color: whitesmoke;
   --main-ht: calc(100vh - var(--header-ht));
   --main-child-pd: 1rem;
   --default-bgc: #ecf0f1;
   --copy-area-text-color: #4a4a4a;
   --copy-area-bgc: #dcdcdc;
-  --copy-area-bg-image-legacy: #757f9a; /* fallback for old browsers */
+  --copy-area-bg-image-legacy: #757f9a;
+  /* fallback for old browsers */
   --copy-area-bg-image-webkit: -webkit-linear-gradient(
       rgba(255, 192, 203, 0.8),
       45%,
       var(--default-bgc)
     ),
-    url("./../assets/images/img-chess-checkmate.jpg"); /* Chrome 10-25, Safari 5.1-6 */
+    url("./../assets/images/img-chess-checkmate.jpg");
+  /* Chrome 10-25, Safari 5.1-6 */
   --copy-area-bg-image: linear-gradient(
       rgba(255, 192, 203, 0.8),
       45%,
       var(--default-bgc)
     ),
-    url("./../assets/images/img-chess-checkmate.jpg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 
+    url("./../assets/images/img-chess-checkmate.jpg");
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 
   26+, Opera 12+, Safari 7+ */
   --copy-area-bg-image: linear-gradient(
       hsla(30, 100%, 70%, 0.65),
       40%,
       var(--default-bgc)
     ),
-    url("./../assets/images/img-chess-checkmate.jpg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 
+    url("./../assets/images/img-chess-checkmate.jpg");
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 
 26+, Opera 12+, Safari 7+ */
   --benefits-area-bgc: var(--default-bgc);
   --form-area-bgc: var(--default-bgc);
@@ -54,6 +64,7 @@
 }
 
 /* - - - - - GENERAL STYLES - - - - - */
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -75,14 +86,15 @@ ul {
 }
 
 /* - - - - - HEADER STYLES - - - - - */
+
 .page-header {
   height: var(--header-ht);
   display: flex;
   padding: var(--header-pd);
   background: var(--header-bgc);
-  color: whitesmoke;
+  color: var(--header-text-color);
   & > * {
-    color: whitesmoke;
+    color: var(--header-text-color);
   }
   .header-logo {
     display: flex;
@@ -95,13 +107,12 @@ ul {
       font-size: 14px;
     }
   }
-
   .header-spacer {
     flex: 1;
   }
   .header-cta-button {
     background-color: transparent;
-    border: 2px solid whitesmoke;
+    border: 2px solid;
     &:hover {
       background-color: rgba(255, 255, 255, 0.1);
     }
@@ -137,6 +148,7 @@ ul {
 }
 
 /* - - - - - MAIN STYLES - - - - - */
+
 main {
   display: flex;
   flex-direction: column;
@@ -150,11 +162,12 @@ main {
   .copy-area {
     flex: 1;
     order: 1;
+    background-image: var(--copy-area-bg-image-legacy);
+    background-image: var(--copy-area-bg-image-webkit);
     background-image: var(--copy-area-bg-image);
     text-align: center;
     color: var(--copy-area-text-color);
-
-    h1 {
+    h1.copy-logo {
       font-size: 5.5vw;
       letter-spacing: 0.3em;
       font-family: "Alegreya Sans SC", Arial, Helvetica, sans-serif;
@@ -180,7 +193,6 @@ main {
       }
     }
   }
-
   .benefits-area {
     display: flex;
     order: 3;
@@ -232,7 +244,6 @@ main {
       }
     }
   }
-
   .form-area {
     display: flex;
     order: 2;
@@ -255,13 +266,11 @@ main {
       box-shadow: 0px 4px 14px -2px rgba(0, 0, 0, 0.7);
       -webkit-box-shadow: 0px 4px 14px -2px rgba(0, 0, 0, 0.7);
       -moz-box-shadow: 0px 4px 14px -2px rgba(0, 0, 0, 0.7);
-
       &:active {
         box-shadow: 0px 0px 12px -2px rgba(0, 0, 0, 0.7);
         -webkit-box-shadow: 0px 0px 12px -2px rgba(0, 0, 0, 0.7);
         -moz-box-shadow: 0px 0px 12px -2px rgba(0, 0, 0, 0.7);
       }
-
       &:hover {
         opacity: 0.9;
       }
@@ -275,7 +284,6 @@ main {
       }
     }
   }
-
   .famous-clients-area {
     display: flex;
     order: 4;
