@@ -77,8 +77,34 @@ ul li {
   list-style: none;
 }
 
-/* - - - - - HEADER STYLES - - - - - */
-.page-header {
+/* - - - - - SCROLL-CONTAINER STYLES - - - - - */
+.scroll-container {
+  scroll-behavior: smooth;
+  overflow: scroll;
+  -ms-scroll-snap-type: x;
+      scroll-snap-type: x;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  /* - - - - - LANDING-PAGE STYLES - - - - - */
+  /* - - - - - FORM-PAGE STYLES - - - - - */
+}
+
+.scroll-container > div {
+  position: relative;
+  height: 100vh;
+  min-width: 100vw;
+  scroll-snap-align: start;
+}
+
+.scroll-container .landing-page {
+  /* - - - - - HEADER STYLES - - - - - */
+  /* - - - - - MAIN STYLES - - - - - */
+}
+
+.scroll-container .landing-page .page-header {
   height: var(--header-ht);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -88,11 +114,11 @@ ul li {
   color: var(--header-text-color);
 }
 
-.page-header > * {
+.scroll-container .landing-page .page-header > * {
   color: var(--header-text-color);
 }
 
-.page-header .header-logo {
+.scroll-container .landing-page .page-header .header-logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -103,41 +129,41 @@ ul li {
   font-family: "Racing Sans One", Arial, Helvetica, sans-serif;
 }
 
-.page-header .header-logo span:nth-child(1) {
+.scroll-container .landing-page .page-header .header-logo span:nth-child(1) {
   letter-spacing: 10px;
 }
 
-.page-header .header-logo span:nth-child(2) {
+.scroll-container .landing-page .page-header .header-logo span:nth-child(2) {
   font-size: 14px;
 }
 
-.page-header .header-spacer {
+.scroll-container .landing-page .page-header .header-spacer {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-.page-header .header-cta-button {
+.scroll-container .landing-page .page-header .header-cta-button {
   background-color: transparent;
   border: 2px solid;
 }
 
-.page-header .header-cta-button:hover {
+.scroll-container .landing-page .page-header .header-cta-button:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
 @media screen and (max-width: 400px) {
-  .page-header .header-cta-button,
-  .page-header .header-spacer {
+  .scroll-container .landing-page .page-header .header-cta-button,
+  .scroll-container .landing-page .page-header .header-spacer {
     display: none;
   }
-  .page-header .header-logo {
+  .scroll-container .landing-page .page-header .header-logo {
     margin: auto;
   }
 }
 
 @media screen and (max-height: 740px) {
-  .page-header {
+  .scroll-container .landing-page .page-header {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
@@ -145,26 +171,25 @@ ul li {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .page-header .header-cta-button,
-  .page-header .header-spacer {
+  .scroll-container .landing-page .page-header .header-cta-button,
+  .scroll-container .landing-page .page-header .header-spacer {
     display: none;
   }
-  .page-header .header-logo {
+  .scroll-container .landing-page .page-header .header-logo {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .page-header .header-logo span:nth-child(1),
-  .page-header .header-logo span:nth-child(2) {
+  .scroll-container .landing-page .page-header .header-logo span:nth-child(1),
+  .scroll-container .landing-page .page-header .header-logo span:nth-child(2) {
     letter-spacing: inherit;
     font-size: inherit;
     padding: 0 4px;
   }
 }
 
-/* - - - - - MAIN STYLES - - - - - */
-main {
+.scroll-container .landing-page main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -176,13 +201,13 @@ main {
   background-color: lightgrey;
 }
 
-main > div {
+.scroll-container .landing-page main > div {
   padding: var(--main-child-pd);
   background: center center no-repeat;
   background-size: cover;
 }
 
-main .copy-area {
+.scroll-container .landing-page main .copy-area {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -196,33 +221,36 @@ main .copy-area {
   color: var(--copy-area-text-color);
 }
 
-main .copy-area h1.copy-logo {
+.scroll-container .landing-page main .copy-area h1.copy-logo {
   font-size: 5.5vw;
   letter-spacing: 0.3em;
   font-family: "Alegreya Sans SC", Arial, Helvetica, sans-serif;
 }
 
-main .copy-area h1.copy-logo span {
+.scroll-container .landing-page main .copy-area h1.copy-logo span {
   color: tomato;
 }
 
-main .copy-area h2 {
+.scroll-container .landing-page main .copy-area h2 {
   font-size: 1.8em;
 }
 
 @media screen and (max-width: 600px) {
-  main .copy-area h1 {
+  .scroll-container .landing-page main .copy-area h1.copy-logo {
     font-size: 2.5em;
   }
 }
 
-@media screen and (max-width: 400px) {
-  main .copy-area h2 {
+@media screen and (max-width: 420px) {
+  .scroll-container .landing-page main .copy-area {
+    padding: var(--main-child-pd);
+  }
+  .scroll-container .landing-page main .copy-area h2 {
     font-size: 1.5em;
   }
 }
 
-main .benefits-area {
+.scroll-container .landing-page main .benefits-area {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -235,7 +263,7 @@ main .benefits-area {
   background-color: var(--benefits-area-bgc);
 }
 
-main .benefits-area .benefit {
+.scroll-container .landing-page main .benefits-area .benefit {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -245,7 +273,7 @@ main .benefits-area .benefit {
           flex-direction: column;
 }
 
-main .benefits-area .benefit .benefit-icon {
+.scroll-container .landing-page main .benefits-area .benefit .benefit-icon {
   width: 50px;
   height: 50px;
   margin: auto;
@@ -254,26 +282,26 @@ main .benefits-area .benefit .benefit-icon {
   background-size: 50px 50px;
 }
 
-main .benefits-area .benefit:nth-of-type(2) .benefit-icon {
+.scroll-container .landing-page main .benefits-area .benefit:nth-of-type(2) .benefit-icon {
   background-image: url("./../assets/icons/icon_quadrants.png");
 }
 
-main .benefits-area .benefit:nth-of-type(3) .benefit-icon {
+.scroll-container .landing-page main .benefits-area .benefit:nth-of-type(3) .benefit-icon {
   background-image: url("./../assets/icons/icon_headset.png");
 }
 
-main .benefits-area .benefit-section {
+.scroll-container .landing-page main .benefits-area .benefit-section {
   text-align: center;
 }
 
 @media screen and (max-height: 670px) {
-  main .benefits-area .benefit:nth-of-type(2) {
+  .scroll-container .landing-page main .benefits-area .benefit:nth-of-type(2) {
     display: none;
   }
 }
 
 @media screen and (max-width: 600px) {
-  main .benefits-area .benefit .benefit-icon {
+  .scroll-container .landing-page main .benefits-area .benefit .benefit-icon {
     width: 40px;
     height: 40px;
     background-size: 40px 40px;
@@ -281,7 +309,7 @@ main .benefits-area .benefit-section {
 }
 
 @media screen and (max-width: 400px) {
-  main .benefits-area {
+  .scroll-container .landing-page main .benefits-area {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -293,12 +321,22 @@ main .benefits-area .benefit-section {
         -ms-flex-order: 2;
             order: 2;
   }
-  main .benefits-area .benefit-section ul {
+  .scroll-container .landing-page main .benefits-area .benefit-section ul {
     display: none;
   }
 }
 
-main .form-area {
+@media screen and (max-width: 340px) and (max-height: 580px) {
+  .scroll-container .landing-page main .benefits-area {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    font-size: small;
+  }
+}
+
+.scroll-container .landing-page main .form-area {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -322,7 +360,7 @@ main .form-area {
   padding: calc(var(--main-child-pd) * 1.5);
 }
 
-main .form-area .form-cta-button {
+.scroll-container .landing-page main .form-area .form-cta-button {
   width: 200px;
   padding: 16px;
   border-radius: 8px;
@@ -337,29 +375,29 @@ main .form-area .form-cta-button {
   -moz-box-shadow: 0px 4px 14px -2px rgba(0, 0, 0, 0.7);
 }
 
-main .form-area .form-cta-button:active {
+.scroll-container .landing-page main .form-area .form-cta-button:active {
   box-shadow: 0px 0px 12px -2px rgba(0, 0, 0, 0.7);
   -webkit-box-shadow: 0px 0px 12px -2px rgba(0, 0, 0, 0.7);
   -moz-box-shadow: 0px 0px 12px -2px rgba(0, 0, 0, 0.7);
 }
 
-main .form-area .form-cta-button:hover {
+.scroll-container .landing-page main .form-area .form-cta-button:hover {
   opacity: 0.9;
 }
 
-main .form-area .form-privacy-notice {
+.scroll-container .landing-page main .form-area .form-privacy-notice {
   margin: 8px auto;
 }
 
 @media screen and (max-width: 400px) {
-  main .form-area {
+  .scroll-container .landing-page main .form-area {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
   }
 }
 
-main .famous-clients-area {
+.scroll-container .landing-page main .famous-clients-area {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -372,7 +410,7 @@ main .famous-clients-area {
   background-color: var(--famous-clients-area-bgc);
 }
 
-main .famous-clients-area .famous-client {
+.scroll-container .landing-page main .famous-clients-area .famous-client {
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -381,20 +419,20 @@ main .famous-clients-area .famous-client {
   background-size: 80px 80px;
 }
 
-main .famous-clients-area .famous-client:nth-of-type(2) {
+.scroll-container .landing-page main .famous-clients-area .famous-client:nth-of-type(2) {
   background-image: url("./../assets/logos/logo-j-company.jpg");
 }
 
-main .famous-clients-area .famous-client:nth-of-type(3) {
+.scroll-container .landing-page main .famous-clients-area .famous-client:nth-of-type(3) {
   background-image: url("./../assets/logos/logo-w-company.jpg");
 }
 
-main .famous-clients-area .famous-client:nth-of-type(4) {
+.scroll-container .landing-page main .famous-clients-area .famous-client:nth-of-type(4) {
   background-image: url("./../assets/logos/logo-rocket-ship.jpg");
 }
 
 @media screen and (min-width: 801px) {
-  main .famous-clients-area .famous-client {
+  .scroll-container .landing-page main .famous-clients-area .famous-client {
     width: 80px;
     height: 80px;
     background-size: 100px 100px;
@@ -402,22 +440,28 @@ main .famous-clients-area .famous-client:nth-of-type(4) {
 }
 
 @media screen and (max-width: 400px) {
-  main .famous-clients-area {
+  .scroll-container .landing-page main .famous-clients-area {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-height: 650px) {
+  .scroll-container .landing-page main .famous-clients-area {
     display: none;
   }
 }
 
 @media screen and (max-height: 580px) {
-  main > div {
+  .scroll-container .landing-page main > div {
     padding: 0.6rem;
   }
 }
 
-/* - - - - - FORM-PAGE STYLES - - - - - */
-.form-page {
+.scroll-container .form-page {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  display: none;
   height: 100vh;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -431,11 +475,11 @@ main .famous-clients-area .famous-client:nth-of-type(4) {
   /* - - - - - FORM-CONTAINER STYLES - - - - - */
 }
 
-.form-page .form-container {
+.scroll-container .form-page .form-container {
   /* - - - - - CONTACT-FORM STYLES - - - - - */
 }
 
-.form-page .form-container .form-title {
+.scroll-container .form-page .form-container .form-title {
   padding: 16px;
   font-size: xx-large;
   color: whitesmoke;
@@ -446,11 +490,11 @@ main .famous-clients-area .famous-client:nth-of-type(4) {
   background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
 }
 
-.form-page .form-container .form-title span {
+.scroll-container .form-page .form-container .form-title span {
   color: tomato;
 }
 
-.form-page .form-container .contact-form {
+.scroll-container .form-page .form-container .contact-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -470,7 +514,7 @@ main .famous-clients-area .famous-client:nth-of-type(4) {
   font-size: large;
 }
 
-.form-page .form-container .contact-form label {
+.scroll-container .form-page .form-container .contact-form label {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -478,8 +522,8 @@ main .famous-clients-area .famous-client:nth-of-type(4) {
   width: 100%;
 }
 
-.form-page .form-container .contact-form label input,
-.form-page .form-container .contact-form label select {
+.scroll-container .form-page .form-container .contact-form label input,
+.scroll-container .form-page .form-container .contact-form label select {
   display: block;
   width: 80%;
   padding: 16px;
@@ -490,22 +534,22 @@ main .famous-clients-area .famous-client:nth-of-type(4) {
   background-color: transparent;
 }
 
-.form-page .form-container .contact-form label input option,
-.form-page .form-container .contact-form label select option {
+.scroll-container .form-page .form-container .contact-form label input option,
+.scroll-container .form-page .form-container .contact-form label select option {
   padding: 4px 0;
 }
 
-.form-page .form-container .contact-form label input:hover,
-.form-page .form-container .contact-form label select:hover {
+.scroll-container .form-page .form-container .contact-form label input:hover,
+.scroll-container .form-page .form-container .contact-form label select:hover {
   border-color: #777;
 }
 
-.form-page .form-container .contact-form label input:focus,
-.form-page .form-container .contact-form label select:focus {
+.scroll-container .form-page .form-container .contact-form label input:focus,
+.scroll-container .form-page .form-container .contact-form label select:focus {
   border: 1px solid #da7d6c;
 }
 
-.form-page .form-container .contact-form .btn-wrapper {
+.scroll-container .form-page .form-container .contact-form .btn-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -517,7 +561,7 @@ main .famous-clients-area .famous-client:nth-of-type(4) {
   padding: 16px 0;
 }
 
-.form-page .form-container .contact-form .btn-wrapper .submit-btn {
+.scroll-container .form-page .form-container .contact-form .btn-wrapper .submit-btn {
   width: 70%;
   border: 1px solid #aaa;
   padding: 16px;
@@ -530,25 +574,25 @@ main .famous-clients-area .famous-client:nth-of-type(4) {
   background-color: #eaeaea;
 }
 
-.form-page .form-container .contact-form .btn-wrapper .submit-btn:hover {
+.scroll-container .form-page .form-container .contact-form .btn-wrapper .submit-btn:hover {
   background-color: dodgerblue;
   color: white;
 }
 
-.form-page .form-container .contact-form .btn-wrapper #contact-form-status {
+.scroll-container .form-page .form-container .contact-form .btn-wrapper #contact-form-status {
   color: orangered;
   margin: 10px auto;
   text-align: center;
 }
 
 @media screen and (max-width: 600px) {
-  .form-page .form-container .contact-form {
+  .scroll-container .form-page .form-container .contact-form {
     width: 80vw;
   }
 }
 
 @media screen and (max-width: 400px) {
-  .form-page .form-container {
+  .scroll-container .form-page .form-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -560,7 +604,7 @@ main .famous-clients-area .famous-client:nth-of-type(4) {
     height: 100%;
     font-size: large;
   }
-  .form-page .form-container .form-title {
+  .scroll-container .form-page .form-container .form-title {
     min-width: 20%;
     height: 100%;
     -webkit-writing-mode: vertical-lr;
@@ -568,23 +612,23 @@ main .famous-clients-area .famous-client:nth-of-type(4) {
             writing-mode: vertical-lr;
     text-orientation: upright;
   }
-  .form-page .form-container .contact-form {
+  .scroll-container .form-page .form-container .contact-form {
     width: 80%;
     height: 100%;
     padding: 32px 16px;
   }
-  .form-page .form-container .contact-form label {
+  .scroll-container .form-page .form-container .contact-form label {
     font-size: larger;
   }
-  .form-page .form-container .contact-form label input,
-  .form-page .form-container .contact-form label select {
+  .scroll-container .form-page .form-container .contact-form label input,
+  .scroll-container .form-page .form-container .contact-form label select {
     padding: 16px 8px;
     font-size: 16px;
   }
-  .form-page .form-container .contact-form label select {
+  .scroll-container .form-page .form-container .contact-form label select {
     overflow-y: scroll;
   }
-  .form-page .form-container .contact-form .btn-wrapper input.submit-btn {
+  .scroll-container .form-page .form-container .contact-form .btn-wrapper input.submit-btn {
     font-size: small;
   }
 }
