@@ -9,68 +9,149 @@
   </head>
 
   <body>
-    <header class="page-header">
-      <a href="#" class="header-logo">
-        <span>HAVER</span>
-        <span>TECHNOLOGY</span>
-      </a>
-      <span class="header-spacer"></span>
-      <button class="header-cta-button">Download Now</button>
-    </header>
-    <main>
-      <div class="copy-area">
-        <h1 class="copy-logo">Euclid<span>9</span></h1>
-        <h2>Moving Your E-Commerce Business Forward</h2>
-      </div>
-      <div class="benefits-area">
-        <div class="benefit">
-          <div class="benefit-icon"></div>
-          <section class="benefit-section">
-            <h3>One Time Setup</h3>
-            <ul>
-              <li>Lorem ipsum dolor amet.</li>
-              <li>Lorem ipsum dolor sit.</li>
-            </ul>
-          </section>
-        </div>
-        <div class="benefit">
-          <div class="benefit-icon"></div>
-          <section class="benefit-section">
-            <h3>Cross Platform</h3>
-            <ul>
-              <li>Lorem ipsum dolor amet.</li>
-              <li>Lorem ipsum dolor sit.</li>
-            </ul>
-          </section>
-        </div>
-        <div class="benefit">
-          <div class="benefit-icon"></div>
-          <section class="benefit-section">
-            <h3>Lifetime Support</h3>
-            <ul>
-              <li>Lorem ipsum dolor amet.</li>
-              <li>Lorem ipsum dolor sit.</li>
-            </ul>
-          </section>
-        </div>
-      </div>
+    <div class="scroll-container">
+      <div class="landing-page">
+        <header class="page-header">
+          <a href="#" class="header-logo">
+            <span>HAVER</span>
+            <span>TECHNOLOGY</span>
+          </a>
+          <span class="header-spacer"></span>
+          <button class="header-cta-button">Download Now</button>
+        </header>
+        <main>
+          <div class="copy-area">
+            <h1 class="copy-logo">Euclid<span>9</span></h1>
+            <h2>Moving Your E-Commerce Business Forward</h2>
+          </div>
+          <div class="benefits-area">
+            <div class="benefit">
+              <div class="benefit-icon"></div>
+              <section class="benefit-section">
+                <h3>One Time Setup</h3>
+                <ul>
+                  <li>Lorem ipsum dolor amet.</li>
+                  <li>Lorem ipsum dolor sit.</li>
+                </ul>
+              </section>
+            </div>
+            <div class="benefit">
+              <div class="benefit-icon"></div>
+              <section class="benefit-section">
+                <h3>Cross Platform</h3>
+                <ul>
+                  <li>Lorem ipsum dolor amet.</li>
+                  <li>Lorem ipsum dolor sit.</li>
+                </ul>
+              </section>
+            </div>
+            <div class="benefit">
+              <div class="benefit-icon"></div>
+              <section class="benefit-section">
+                <h3>Lifetime Support</h3>
+                <ul>
+                  <li>Lorem ipsum dolor amet.</li>
+                  <li>Lorem ipsum dolor sit.</li>
+                </ul>
+              </section>
+            </div>
+          </div>
 
-      <div class="form-area">
-        <button class="form-cta-button">Get Started!</button>
-        <span class="form-privacy-notice">
-          <a href="https://www.state.gov/privacy-policy/" target="_blank"
-            >Euclid Privacy Notice</a
+          <div class="form-area">
+            <button class="form-cta-button">Get Started!</button>
+            <span class="form-privacy-notice">
+              <a href="https://www.state.gov/privacy-policy/" target="_blank"
+                >Euclid Privacy Notice</a
+              >
+            </span>
+          </div>
+
+          <div class="famous-clients-area">
+            <div class="famous-client"></div>
+            <div class="famous-client"></div>
+            <div class="famous-client"></div>
+            <div class="famous-client"></div>
+          </div>
+        </main>
+      </div>
+      <div class="form-page" style="display: none">
+        <div class="form-container">
+          <div class="form-title">EUCLID <span>9</span></div>
+          <form
+            id="euclid-contact"
+            action=""
+            method="POST"
+            class="contact-form"
           >
-        </span>
-      </div>
+            <label for="GET-name"
+              >Name
+              <input
+                id="GET-name"
+                type="text"
+                name="name"
+                maxlength="40"
+                autofocus
+                placeholder="Enter your name"
+                required
+              />
+            </label>
 
-      <div class="famous-clients-area">
-        <div class="famous-client"></div>
-        <div class="famous-client"></div>
-        <div class="famous-client"></div>
-        <div class="famous-client"></div>
+            <label for="GET-email"
+              >Email
+              <input
+                id="GET-email"
+                type="email"
+                name="_replyto"
+                maxlength="40"
+                placeholder="email@example.com"
+                required
+              />
+            </label>
+
+            <input type="hidden" name="_subject" value="Euclid Contact" />
+            <label for="GET-job"
+              >Occupation
+              <select
+                id="GET-job"
+                name="job"
+                form="euclid-contact"
+                size="0"
+                required
+                onfocus="this.size = 2;"
+                onchange="this.size = 1;"
+                onblur="this.size = 1;"
+              >
+                <option value="">Select your occupation:</option>
+                <option value="Software Developer">Software Engineer</option>
+                <option value="QA Engineer">QA Engineer</option>
+                <option value="Web Developer">Web Developer</option>
+                <option value="Web Designer">Web Designer</option>
+                <option value="Business Analyst">Business Analyst</option>
+                <option value="Program Manager">Program Manager</option>
+                <option value="Other">Other</option>
+              </select>
+            </label>
+
+            <div class="btn-wrapper">
+              <input
+                id="GET-submission"
+                type="submit"
+                value="Download"
+                class="submit-btn"
+              />
+              <a
+                href="/assets/files/dummyFile.zip"
+                type="hidden"
+                download="dummyFile"
+                id="download-btn"
+              >
+              </a>
+              <p id="contact-form-status"></p>
+            </div>
+          </form>
+        </div>
       </div>
-    </main>
+    </div>
     <script src="js/main.js"></script>
   </body>
 </html>
