@@ -4,18 +4,22 @@
 */
 
 // - - - - - HTML ELEMENTS - - - - -
-let contactForm = document.getElementById("euclid-contact");
-let contactFormBtn = document.getElementById("GET-submission");
-let contactFormStatus = document.getElementById("contact-form-status");
-let downloadBtn = document.getElementById("download-btn");
-let ctaBtns = document.querySelectorAll(".header-cta-button, .form-cta-button");
-let formPage = document.querySelector(".form-page");
-
+const contactForm = document.getElementById("euclid-contact");
+const contactFormBtn = document.getElementById("GET-submission");
+const contactFormStatus = document.getElementById("contact-form-status");
+const downloadBtn = document.getElementById("download-btn");
+const ctaBtns = document.querySelectorAll(
+  ".header-cta-button, .form-cta-button"
+);
+const ctaLink = document.querySelector(".form-cta-link");
+const scrollContainer = document.querySelector(".scroll-container");
+const landingPage = document.querySelector(".landing-page");
+const formPage = document.querySelector(".form-page");
 // - - - - - CONSTANTS AND VARIABLES - - - - -
 
 // - - - - - EVENT LISTENERS - - - - -
-// Handle transition to form
-ctaBtns.forEach((btn) => btn.addEventListener("click", displayFormPage));
+// Handle transition to form page
+ctaBtns.forEach((btn) => btn.addEventListener("click", scrollToFormPage));
 
 // Handle the form submission event
 contactForm.addEventListener("submit", function (ev) {
@@ -28,20 +32,21 @@ contactForm.addEventListener("submit", function (ev) {
   ev.preventDefault();
   downloadBtn.click();
 });
+
 // - - - - - FUNCTIONS - - - - -
-
-// - - - - - FORM FUNCTIONS - - - - -
-// Courtesy of FormSpree.com
-
-// Display form
-function displayFormPage() {
+// Transitions from landing page to form page
+function scrollToFormPage() {
   formPage.style.display = "flex";
-  window.scrollTo({
+  // ctaLink.click();
+  scrollContainer.scrollTo({
     top: 0,
-    left: formPage.clientWidth,
+    left: landingPage.clientWidth,
     behavior: "smooth",
   });
 }
+
+// - - - - - FORM FUNCTIONS - - - - -
+// Courtesy of FormSpree.com
 
 // Success and Error functions for after the form is submitted
 function success() {

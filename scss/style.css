@@ -605,6 +605,7 @@ ul li {
     font-size: large;
   }
   .scroll-container .form-page .form-container .form-title {
+    width: 20%;
     min-width: 20%;
     height: 100%;
     -webkit-writing-mode: vertical-lr;

@@ -374,8 +374,6 @@ ul {
 
     /* - - - - - FORM-CONTAINER STYLES - - - - - */
     .form-container {
-      // min-width: 280px;
-      // min-height: 460px;
       .form-title {
         padding: 16px;
         font-size: xx-large;
@@ -491,6 +489,7 @@ ul {
           height: 100%;
           font-size: large;
           .form-title {
+            width: 20%; // Prevents shrinking when select item clicked
             min-width: 20%;
             height: 100%;
             writing-mode: vertical-lr;
