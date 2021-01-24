@@ -329,3 +329,164 @@ main {
     }
   }
 }
+
+/* - - - - - FORM-PAGE STYLES - - - - - */
+.form-page {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
+    url("/assets/images/img_flat_colored_office_furniture__toa-heftiba.jpg")
+      #f5f5f5 center center no-repeat;
+  background-size: cover;
+
+  /* - - - - - FORM-CONTAINER STYLES - - - - - */
+  .form-container {
+    // min-width: 280px;
+    // min-height: 460px;
+    .form-title {
+      padding: 16px;
+      font-size: xx-large;
+      color: whitesmoke;
+      text-align: center;
+      border-radius: 8px 8px 0px 0px;
+      background-color: #333;
+      background: radial-gradient(
+          circle,
+          transparent 20%,
+          #333 20%,
+          #333 80%,
+          transparent 80%,
+          transparent
+        ),
+        radial-gradient(
+            circle,
+            transparent 20%,
+            #333 20%,
+            #333 80%,
+            transparent 80%,
+            transparent
+          )
+          25px 25px,
+        linear-gradient(#444 2px, transparent 2px) 0 -1px,
+        linear-gradient(90deg, #444 2px, #333 2px) -1px 0;
+      background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
+      span {
+        color: tomato;
+      }
+    }
+
+    /* - - - - - CONTACT-FORM STYLES - - - - - */
+    .contact-form {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding: 32px;
+      width: 60vw;
+      max-width: 800px;
+      border: 2px lightgray solid;
+      border-radius: 0 0 8px 8px;
+      background-color: white;
+      font-size: large;
+
+      label {
+        flex: 1;
+        margin-left: 10%;
+        width: 100%;
+        input,
+        select {
+          display: block;
+          width: 80%;
+          padding: 16px;
+          margin-bottom: 32px;
+          border: transparent;
+          border-bottom: 2px solid #aaa;
+          font-size: large;
+          background-color: transparent;
+          option {
+            padding: 4px 0;
+          }
+          &:hover {
+            border-color: #777;
+          }
+          &:focus {
+            border: 1px solid hsl(9, 60%, 64%);
+          }
+        }
+      }
+
+      .btn-wrapper {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 16px 0;
+
+        .submit-btn {
+          width: 70%;
+          border: 1px solid #aaa;
+          padding: 16px;
+          margin-left: 15%;
+          margin-top: 16px;
+          max-width: 600px;
+          letter-spacing: 0.5em;
+          font-weight: 700;
+          font-size: 16px;
+          background-color: #eaeaea;
+          &:hover {
+            background-color: dodgerblue;
+            color: white;
+          }
+        }
+        #contact-form-status {
+          color: orangered;
+          margin: 10px auto;
+          text-align: center;
+        }
+      }
+      // CONTACT-FORM MEDIA QUERIES
+      @media screen and (max-width: 600px) {
+        & {
+          width: 80vw;
+        }
+      }
+    }
+    // FORM-CONTAINER MEDIA QUERIES
+    @media screen and (max-width: 400px) {
+      & {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+        font-size: large;
+        .form-title {
+          min-width: 20%;
+          height: 100%;
+          writing-mode: vertical-lr;
+          text-orientation: upright;
+        }
+        .contact-form {
+          width: 80%;
+          height: 100%;
+          padding: 32px 16px;
+          label {
+            font-size: larger;
+            input,
+            select {
+              padding: 16px 8px;
+              font-size: 16px;
+            }
+            select {
+              overflow-y: scroll;
+            }
+          }
+          .btn-wrapper {
+            input.submit-btn {
+              font-size: small;
+            }
+          }
+        }
+      }
+    }
+  }
+}
