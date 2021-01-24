@@ -469,8 +469,8 @@ ul li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.2))), url("/assets/images/img_flat_colored_office_furniture__toa-heftiba.jpg") #f5f5f5 center center no-repeat;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url("/assets/images/img_flat_colored_office_furniture__toa-heftiba.jpg") #f5f5f5 center center no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.2))), url("./../assets/images/img_flat_colored_office_furniture__toa-heftiba.jpg") #f5f5f5 center center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url("./../assets/images/img_flat_colored_office_furniture__toa-heftiba.jpg") #f5f5f5 center center no-repeat;
   background-size: cover;
   /* - - - - - FORM-CONTAINER STYLES - - - - - */
 }
