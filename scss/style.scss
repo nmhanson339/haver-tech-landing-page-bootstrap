@@ -210,6 +210,11 @@ ul {
             padding: var(--main-child-pd);
           }
         }
+        @media screen and (max-height: 320px) {
+          & h2 {
+            font-size: 1.4em;
+          }
+        }
       }
       .benefits-area {
         display: flex;
@@ -267,6 +272,11 @@ ul {
             font-size: small;
           }
         }
+        @media screen and (max-height: 530px) {
+          & {
+            display: none;
+          }
+        }
       }
       .form-area {
         display: flex;
@@ -296,6 +306,11 @@ ul {
           }
           &:hover {
             opacity: 0.9;
+          }
+          @media screen and (max-height: 320px) {
+            & {
+              font-size: large;
+            }
           }
         }
         .form-privacy-notice {
@@ -340,6 +355,11 @@ ul {
           }
         }
         @media screen and (max-width: 400px) {
+          & {
+            display: none;
+          }
+        }
+        @media screen and (max-height: 530px) {
           & {
             display: none;
           }

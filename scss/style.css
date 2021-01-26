@@ -250,6 +250,12 @@ ul li {
   }
 }
 
+@media screen and (max-height: 320px) {
+  .scroll-container .landing-page main .copy-area h2 {
+    font-size: 1.4em;
+  }
+}
+
 .scroll-container .landing-page main .benefits-area {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -336,6 +342,12 @@ ul li {
   }
 }
 
+@media screen and (max-height: 530px) {
+  .scroll-container .landing-page main .benefits-area {
+    display: none;
+  }
+}
+
 .scroll-container .landing-page main .form-area {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -382,6 +394,12 @@ ul li {
 
 .scroll-container .landing-page main .form-area .form-cta-button:hover {
   opacity: 0.9;
+}
+
+@media screen and (max-height: 320px) {
+  .scroll-container .landing-page main .form-area .form-cta-button {
+    font-size: large;
+  }
 }
 
 .scroll-container .landing-page main .form-area .form-privacy-notice {
@@ -439,6 +457,12 @@ ul li {
 }
 
 @media screen and (max-width: 400px) {
+  .scroll-container .landing-page main .famous-clients-area {
+    display: none;
+  }
+}
+
+@media screen and (max-height: 530px) {
   .scroll-container .landing-page main .famous-clients-area {
     display: none;
   }
